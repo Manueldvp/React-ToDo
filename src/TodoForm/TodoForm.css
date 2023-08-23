@@ -1,0 +1,77 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 500px;
+    padding: 33px 40px;
+    height: 300px;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+label {
+ text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #303031;
+  margin-bottom: 26px;
+}
+
+form textarea {
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    display: flex;
+    border: none;
+    text-align: center;
+    padding: 12px;
+    font-size: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+textarea::placeholder {
+    color: #A5A5A5;
+    font-family: 'Montserrat';
+    font-weight: 400;
+  }
+
+.TodoForm-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.Buttons {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 500;
+    line-height: 1;
+    padding: 1em 1em;
+    width: 120px;
+    position: relative;
+    transition: filter var(--motion-duration);
+}
+
+.TodoForm-butto--1 {
+    background-color: rgb(211, 91, 91);
+}
+.TodoForm-butto--1:hover {
+    background-color: rgb(201, 25, 25);
+}
+  
+.TodoForm-butto--2 {
+    background-color: rgb(155, 206, 145);
+}
+
+.TodoForm-butto--2:hover {
+    background-color: green;
+}

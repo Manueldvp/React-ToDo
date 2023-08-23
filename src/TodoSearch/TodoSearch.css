@@ -11,6 +11,7 @@
     border: 1px solid #b4b7bb;
     text-indent: 1em;
     font-style: italic;
+    margin-left: 2rem;
   }
   
   .search-container input:focus {

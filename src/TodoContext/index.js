@@ -12,8 +12,6 @@ function TodoProvider( {children} ) {
   const completedTodos = todos.filter(todo => !!todo.completed).length
   const totalTodos = todos.length
 
-  console.log('Los usuarios buscan todos de ' + searchValue);
-
   const searchedTodos = todos.filter(
     (todo) => {
     const todoText = todo.text.toLowerCase()
@@ -23,6 +21,14 @@ function TodoProvider( {children} ) {
   )
 
   
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      text,
+      completed: false,
+    })
+    saveTodos(newTodos);
+  }
 
   const completeTodo = (text) => {
     const newTodos = [...todos];
@@ -52,6 +58,9 @@ function TodoProvider( {children} ) {
             searchedTodos,
             completeTodo,
             deleteTodo,
+            openModal,
+            setOpenModal,
+            addTodo,
         }}>
             {children}
         </TodoContext.Provider>
