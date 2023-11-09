@@ -1,9 +1,9 @@
 import React from "react";
-import { useLocalStorage } from "../App/useLocalStorage";
+import { useLocalStorage } from "./useLocalStorage";
 
-const TodoContext = React.createContext();
 
-function TodoProvider( {children} ) {
+
+function useTodos() {
 
   const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage('TODOS_V1', [])
   const [searchValue, setSearchValue] = React.useState('');
@@ -47,27 +47,23 @@ function TodoProvider( {children} ) {
     newTodos.splice(todoIndex, 1)
     saveTodos(newTodos)
   }
-    return (
-        <TodoContext.Provider value={ {
-            loading,
-            completedTodos,
-            error,
-            totalTodos,
-            searchValue,
-            setSearchValue,
-            searchedTodos,
-            completeTodo,
-            deleteTodo,
-            openModal,
-            setOpenModal,
-            addTodo,
-        }}>
-            {children}
-        </TodoContext.Provider>
-    )
+  return {
+    loading,
+    completedTodos,
+    error,
+    totalTodos,
+    searchValue,
+    setSearchValue,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+    addTodo,
+  }
+    
 }
 
 
-<TodoContext.Consumer></TodoContext.Consumer>
 
-export { TodoContext, TodoProvider }
+export  {useTodos}

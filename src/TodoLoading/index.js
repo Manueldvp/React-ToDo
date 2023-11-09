@@ -1,7 +1,6 @@
 import React from "react";
 import ContentLoader from 'react-content-loader'
 // import "./TodosLoading.css";
-import searchIcon from "../assets/search-icon.svg";
 
 
 const TodoLoading = props => (
